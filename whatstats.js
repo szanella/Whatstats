@@ -76,7 +76,7 @@ function showData(stats) {
 	
 	$('#senders').html(stats.senders.join(', '));
 	$('#total_messages').html(stats.message_count);
-	$('#average_messages').html(stats.avg_per_dayW);
+	$('#average_messages').html(stats.avg_per_day);
 	
 	//fill in the data for the graph
 	var chatData = [['Date', 'Count']];
