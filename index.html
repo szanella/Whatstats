@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>Chat stats calculator</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<script type="text/javascript"
+		          src="https://www.google.com/jsapi?autoload={
+		            'modules':[{
+		              'name':'visualization',
+		              'version':'1',
+		              'packages':['corechart']
+		            }]
+		          }"></script>
+		<script type="text/javascript" src="./whatstats.js"></script>
+	</head>
+	<body>
+		<input type="file" id="chat_field"></textarea>
+		<script type="text/javascript">
+			document.getElementById('chat_field').addEventListener('change', processChat, false);
+		</script>
+		<h1>Whatstats</h1>
+		<div>Senders: <span id="senders"></div>
+		<div>Total messages <span id="total_messages"></div>
+		<div>Average messages per day <span id="average_messages"></div>
+		<div id="curve_chart" style="width: 900px; height: 500px"></div>
+		<div id="piechart" style="width: 900px; height: 500px;"></div>
+	</body>
+</html>
